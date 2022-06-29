@@ -30,22 +30,61 @@
 }
 
 .Navigation {
+  text-transform: uppercase;
+  text-align: center;
+  vertical-align: middle;
+  font-size: 14px;
 
 
   &_menu {
     display: flex;
     margin: 0;
-    padding: 0 16px;
+    padding: 0 40px;
 
     &__item {
-      margin: 0 auto;
       padding: 0 16px;
       vertical-align: middle;
       list-style: none;
     }
 
     &__links {
+      text-decoration: none;
+      color: white;
 
+      &:hover {
+        color: red;
+      }
     }
+  }
+}
+
+.Header_region {
+  width: 249px;
+  height: 64px;
+  margin-right: 20px;
+}
+.Header_registration {
+  width: 74px;
+  height: 64px;
+  margin-right: -4px;
+  border-left: 1px solid #44474a;
+}
+.Header_basket {
+  height: 64px;
+  margin-right: -4px;
+  border-left: 1px solid #44474a;
+
+  &__card {
+    min-width: 64px;
+    height: 64px;
+    padding-left: 22px;
+    padding-right: 22px;
+    line-height: 66px;
+  }
+
+  &__item {
+    width: 20px;
+    height: 24px;
+    vertical-align: middle;
   }
 }

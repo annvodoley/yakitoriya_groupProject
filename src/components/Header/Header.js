@@ -1,6 +1,7 @@
 import React from 'react';
 import classes from './Header.module.scss'
 import icon from '../../images/yakitoria_logo.svg'
+import icon_bag from '../../images/icon-bag.svg'
 
 const Header = () => {
     return (
@@ -25,6 +26,14 @@ const Header = () => {
                         </li>
                     </ul>
                 </nav>
+                <div className={classes.Header_region}></div>
+                <div className={classes.Header_registration}></div>
+                <div className={classes.Header_basket}>
+                    <a className={classes.Header_basket__card}>
+                        <img src={icon_bag} className={classes.Header_basket__item}/>
+                        Пустая корзина
+                    </a>
+                </div>
             </div>
         </div>
     );
