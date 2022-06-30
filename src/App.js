@@ -4,7 +4,10 @@ import Slider from "./components/Slider/Slider";
 function App() {
   return (
     <div className="App">
-        <Slider/>
+        <Slider
+        link= "Монстры на каникулах в Якитории"
+
+        />
     </div>
   );
 }
