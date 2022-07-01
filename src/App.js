@@ -5,8 +5,7 @@ function App() {
   return (
     <div className="App">
         <Slider
-        link= "Монстры на каникулах в Якитории"
-
+        link= '"Монстры на каникулах в Якитории"'
         />
     </div>
   );
