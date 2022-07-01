@@ -22,7 +22,7 @@ const Header = () => {
                             <a href="/delivery/" className={classes.Navigation_menu__links}>О доставке</a>
                         </li>
                         <li className={classes.Navigation_menu__item}>
-                            <a href="/yakitoria/" className={classes.Navigation_menu__links}>Якитория помогает</a>
+                            <a href="/yakitoria/" className={classes.Navigation_menu__links}><b>Якитория помогает</b></a>
                         </li>
                     </ul>
                 </nav>
@@ -31,7 +31,7 @@ const Header = () => {
                 <div className={classes.Header_basket}>
                     <a className={classes.Header_basket__card}>
                         <img src={icon_bag} className={classes.Header_basket__item}/>
-                        Пустая корзина
+                        <p className={classes.Header_basket__card___subtitle}>Пустая корзина</p>
                     </a>
                 </div>
             </div>
