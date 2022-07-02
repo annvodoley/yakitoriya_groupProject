@@ -2,6 +2,7 @@ import React from 'react';
 import classes from './Header.module.scss'
 import icon from '../../images/yakitoria_logo.svg'
 import icon_bag from '../../images/icon-bag.svg'
+import Cart from '../Cart/Cart';
 
 const Header = () => {
     return (
@@ -28,12 +29,8 @@ const Header = () => {
                 </nav>
                 <div className={classes.Header_region}></div>
                 <div className={classes.Header_registration}></div>
-                <div className={classes.Header_basket}>
-                    <a className={classes.Header_basket__card}>
-                        <img src={icon_bag} className={classes.Header_basket__item}/>
-                        <p className={classes.Header_basket__card___subtitle}>Пустая корзина</p>
-                    </a>
-                </div>
+                <Cart/>
+
             </div>
         </div>
     );

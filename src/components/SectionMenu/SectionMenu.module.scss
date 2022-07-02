@@ -1,6 +1,6 @@
 
 .SectionMenu {
-  background:  #2b2d2f;
+  background: #2b2d2f;
   margin: 0;
   padding: 0;
   width: 276px;
@@ -12,5 +12,11 @@
   p{
     margin-left: 10px;
     color: white;
+  }
+
+  img{
+    width: 100px;
+    height: 62px;
+    object-fit: contain;
   }
 }
