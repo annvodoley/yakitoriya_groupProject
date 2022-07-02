@@ -1,0 +1,94 @@
+.Header_main {
+  min-width: 960px;
+  background: #2b2d2f;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: 64px;
+  color: #fff;
+
+  &__container {
+    display: flex;
+    align-items: center;
+    padding: 0 32px 0 64px;
+  }
+}
+
+.Header_logo {
+  flex: none;
+  width: 170px;
+  height: 36px;
+
+
+  &__icon {
+    width: 204px;
+    height: 36px;
+  }
+}
+
+.Navigation {
+  min-width: fit-content;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 14px;
+
+
+  &_menu {
+    display: flex;
+    margin: 0;
+    padding: 0 40px;
+
+    &__item {
+      padding: 0 16px;
+      vertical-align: middle;
+      list-style: none;
+    }
+
+    &__links {
+      text-decoration: none;
+      color: white;
+
+      &:hover {
+        color: red;
+      }
+    }
+  }
+}
+
+.Header_region {
+  width: 249px;
+  margin-right: 20px;
+}
+.Header_registration {
+  width: 74px;
+  height: 64px;
+  margin-right: -4px;
+  border-left: 1px solid #44474a;
+}
+.Header_basket {
+  flex: none;
+  height: 64px;
+  margin-right: -4px;
+  border-left: 1px solid #44474a;
+
+  &__card {
+    display: inline-flex;
+    align-items: center;
+    height: 64px;
+    padding-left: 22px;
+    padding-right: 22px;
+
+    &___subtitle {
+      display: inline;
+      vertical-align: middle;
+      padding-left: 10px;
+      font-size: 12px;
+    }
+  }
+
+  &__item {
+    width: 20px;
+    height: 24px;
+    vertical-align: middle;
+  }
+}
