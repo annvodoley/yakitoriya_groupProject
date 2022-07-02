@@ -1,0 +1,32 @@
+*{
+        background: #000;
+        font-size: 1rem;
+        font-family: 'helvetica_neue_cyr_light',Helvetica,Arial,'Helvetica CY','Nimbus Sans L',sans-serif;
+        font-weight: normal;
+        font-style: normal;
+        line-height: 1.5;
+        color: #c0c0c0;
+        vertical-align: top;
+        fill: #c0c0c0;
+        -webkit-backface-visibility: hidden;
+        backface-visibility: hidden;
+}
+.SectionMenu{
+    border: none;
+    display: block;
+    position: relative;
+    width: 276px;
+    min-height: 64px;
+    padding: 23px 0 23px 110px;
+
+   .menu_List{
+    border-bottom: 1px solid #c0c0c0;
+    color: #fff;
+    text-decoration: none;
+    transition: all 200ms ease;
+
+    .menu_List_Pic{
+    
+    }
+   }
+}
