@@ -57,7 +57,7 @@ const Slider = (props) => {
             <SplideSlide>
                 <div className={classes.Slider_module_img} style={{
                     backgroundImage: `url(${lunchSell})`}}>
-                    <h2><a href={''} target={'_blank'} className={classes.Slider_module_link} >"10 % на доставку"</a></h2>
+                    <h2><a href={''} target={'_blank'} className={classes.Slider_module_link} >"-10 % на доставку"</a></h2>
                 </div>
             </SplideSlide>
         </Splide>
