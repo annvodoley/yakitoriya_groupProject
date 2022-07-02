@@ -1,0 +1,29 @@
+.Slider_module{
+  &_img{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-repeat: no-repeat;
+    height: 100vh;
+    background-size: cover;
+    width: 100%;
+  }
+  &_link{
+    font-family: 'Helvetica Neue', sans-serif;
+    font-size: 36px;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all 200ms ease;
+    color: #ffffff;
+    font-weight: 400;
+    letter-spacing: 2.8px;
+     }
+  &_link:hover {
+    color: #adadad;
+  }
+
+}
+.splide__pagination--ttb {
+  right: 3.5em!important;
+  width: 20px!important;
+}
