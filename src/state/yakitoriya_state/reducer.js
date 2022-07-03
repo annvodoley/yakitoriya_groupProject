@@ -1,5 +1,6 @@
-import { ADD_MENU_LIST } from "./types";
+import {ADD_MENU_LIST, ADD_SALATS, ADD_SETS, ADD_SOUPS} from "./types";
 import { ADD_SASIMI } from "./types";
+import {ADD_HOT_ROLLS} from "./types";
 
 const initState = {
   sectionList: [],
@@ -7,6 +8,22 @@ const initState = {
 
 const initState1 = {
   sasimi: [],
+};
+
+const initState2 = {
+  hotrolls: [],
+};
+
+const initState3 = {
+  salats: [],
+};
+
+const initState4 = {
+  sets: [],
+};
+
+const initState5 = {
+  soups: [],
 };
 
 export const MenuReducer = (state = initState, action) => {
@@ -17,11 +34,53 @@ export const MenuReducer = (state = initState, action) => {
       return { ...state };
   }
 };
+
+//sasimi
 export const SasimiReducer = (state = initState1, action) => {
   switch (action.type) {
     case ADD_SASIMI:
       return { ...state, sasimi: action.payload };
     default:
       return { ...state };
+  }
+};
+
+//hotrolls
+export const HotRollsReducer = (state=initState2, action) => {
+  switch (action.type) {
+    case ADD_HOT_ROLLS:
+      return {...state, hotrolls: action.payload };
+    default:
+      return {...state};
+  }
+};
+
+//salats
+export const SalatsReducer = (state=initState3, action) => {
+  switch (action.type) {
+    case ADD_SALATS:
+      return {...state, salats: action.payload };
+    default:
+      return {...state};
+  }
+};
+
+//sets
+export const SetsReducer = (state=initState4, action) => {
+  switch (action.type) {
+    case ADD_SETS:
+      return {...state, sets: action.payload };
+    default:
+      return {...state};
+  }
+};
+
+//soups
+export const SoupsReducer = (state=initState5, action) => {
+  switch (action.type) {
+    case ADD_SOUPS:
+      return {...state, soups: action.payload };
+    default:
+      return {...state};
   }
 };

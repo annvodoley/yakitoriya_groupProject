@@ -55,10 +55,17 @@ a {
     }
   }
   &__description {
+    height: 65px;
+    overflow: auto;
     color: #888;
     font-size: 0.8125rem;
     line-height: 1.4;
     letter-spacing: 0.02em;
+    border-bottom: 1px solid rgba(136, 136, 136, 0.573);
+    transition: 0.2s ease-in-out;
+    &:hover {
+      border-bottom: 1px solid #cccc2857;
+    }
   }
   &__bottom {
     display: flex;
