@@ -9,6 +9,8 @@ import Soups from "./pages/Items/Soups";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchMenuListAction } from "./state/yakitoriya_state/actions";
+import Layout from "./pages/Layout/Layout";
+import NotFound from "./pages/NotFound/NotFound";
 
 function App() {
   const dispatch = useDispatch();
@@ -19,13 +21,16 @@ function App() {
   return (
     <div className={classes.app}>
       <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/home" element={<Home />} />
-        <Route path="/1" element={<Sasimi />} />
-        <Route path="/2" element={<HotRolls />} />
-        <Route path="/4" element={<Salats />} />
-        <Route path="/5" element={<Sets />} />
-        <Route path="/6" element={<Soups />} />
+        <Route path="/" element={<Layout />}>
+          <Route index element={<Home />} />
+          <Route path="home" element={<Home />} />
+          <Route path="1" element={<Sasimi />} />
+          <Route path="2" element={<HotRolls />} />
+          <Route path="4" element={<Salats />} />
+          <Route path="5" element={<Sets />} />
+          <Route path="6" element={<Soups />} />
+          <Route path="*" element={<NotFound />} />
+        </Route>
       </Routes>
     </div>
   );

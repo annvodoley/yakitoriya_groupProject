@@ -21,44 +21,38 @@ function Sets() {
   }, []);
 
   return (
-    <div className={classes.Sets}>
-      <Header />
-      <div className={classes.MainContent}>
-        <AsideMenu />
-        <div className={classes.itemsWrapper}>
-          <h1>Сеты</h1>
-          <div className={classes.itemsFilter}>
-            <div>
-              <span>Фильтр</span>
-              <span>Сортировать по цене</span>
-            </div>
-            <div className={classes.filterReset}>
-              <span>
-                <span>x</span> Сбросить фильтры
-              </span>
-            </div>
-          </div>
-          {isLoading
-            ? [...Array(3)].map((item) => {
-                return (
-                  <div className={classes.ldsRipple}>
-                    <div></div>
-                    <div></div>
-                  </div>
-                );
-              })
-            : sets.map((item) => {
-                return (
-                  <MenuItem
-                    imgUrl={item.imgUrl ? item.imgUrl : ""}
-                    name={item.name ? item.name : ""}
-                    text={item.desc ? item.desc : ""}
-                    price={item.price ? item.price : ""}
-                  />
-                );
-              })}
+    <div className={classes.itemsWrapper}>
+      <h1>Сеты</h1>
+      <div className={classes.itemsFilter}>
+        <div>
+          <span>Фильтр</span>
+          <span>Сортировать по цене</span>
+        </div>
+        <div className={classes.filterReset}>
+          <span>
+            <span>x</span> Сбросить фильтры
+          </span>
         </div>
       </div>
+      {isLoading
+        ? [...Array(3)].map((item) => {
+            return (
+              <div className={classes.ldsRipple}>
+                <div></div>
+                <div></div>
+              </div>
+            );
+          })
+        : sets.map((item) => {
+            return (
+              <MenuItem
+                imgUrl={item.imgUrl ? item.imgUrl : ""}
+                name={item.name ? item.name : ""}
+                text={item.desc ? item.desc : ""}
+                price={item.price ? item.price : ""}
+              />
+            );
+          })}
     </div>
   );
 }
