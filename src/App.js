@@ -1,10 +1,4 @@
-import "./App.module.scss";
-import Cart from "./components/Cart/Cart";
-import MenuItem from "./components/MenuItem/MenuItem";
-import classes from "../src/components/MenuItem/MenuItem.module.scss";
-import Header from "./components/Header/Header";
-import SectionMenu from "./components/SectionMenu/SectionMenu";
-import Slider from "./components/Slider/Slider";
+import classes from "./App.module.scss";
 import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import Sasimi from "./pages/Items/Sasimi";
@@ -19,11 +13,11 @@ function App() {
     dispatch(fetchMenuListAction());
   }, []);
   return (
-    <div className="app">
+    <div className={classes.app}>
       <Routes>
         <Route path="/" element={<Home />} />
         <Route path="/home" element={<Home />} />
-        <Route path="/sasimi" element={<Sasimi />} />
+        <Route path="/1" element={<Sasimi />} />
       </Routes>
     </div>
   );
