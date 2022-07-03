@@ -1,7 +1,7 @@
 import { combineReducers } from "redux";
 import {
   HotRollsReducer,
-  MenuReducer,
+  MenuReducer, RollsReducer,
   SalatsReducer,
   SasimiReducer,
   SetsReducer,
@@ -15,4 +15,5 @@ export const RootReducer = combineReducers({
   SalatsReducer: SalatsReducer,
   SetsReducer: SetsReducer,
   SoupsReducer: SoupsReducer,
+  RollsReducer: RollsReducer,
 });

@@ -1,4 +1,4 @@
-import {ADD_MENU_LIST, ADD_SALATS, ADD_SETS, ADD_SOUPS} from "./types";
+import {ADD_MENU_LIST, ADD_ROLLS, ADD_SALATS, ADD_SETS, ADD_SOUPS} from "./types";
 import { ADD_SASIMI } from "./types";
 import { ADD_HOT_ROLLS} from "./types";
 
@@ -52,6 +52,14 @@ export const fetchSoupsAction = () => {
           .then((res) => dispatch(addSoupsAction(res)));
 };
 
+//request rolls
+export const fetchRollsAction = () => {
+  return (dispatch) =>
+      fetch("https://roll-store.herokuapp.com/menu/rolls")
+          .then((res) => res.json())
+          .then((res) => dispatch(addSRollsAction(res)));
+};
+
 //menuListAction
 export const addMenuListAction = (menuList) => ({
   type: ADD_MENU_LIST,
@@ -89,4 +97,10 @@ export const addSetsAction = (sets) => ({
 export const addSoupsAction = (soups) => ({
   type: ADD_SOUPS,
   payload: soups,
+});
+
+//rollsAction
+export const addSRollsAction = (rolls) => ({
+  type: ADD_ROLLS,
+  payload: rolls,
 });

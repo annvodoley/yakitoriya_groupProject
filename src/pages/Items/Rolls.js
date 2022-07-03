@@ -3,18 +3,18 @@ import classes from "./Items.module.scss";
 import Header from "../../components/Header/Header";
 import AsideMenu from "../../components/AsideMenu/AsideMenu";
 import { useDispatch, useSelector } from "react-redux";
-import {fetchSoupsAction} from "../../state/yakitoriya_state/actions";
+import {fetchRollsAction} from "../../state/yakitoriya_state/actions";
 import MenuItem from "../../components/MenuItem/MenuItem";
 
 
-function Soups() {
+function Rolls() {
   const [isLoading, setIsLoading] = React.useState(true);
   const dispatch = useDispatch();
 
-  const soups = useSelector((state) => state.SoupsReducer.soups);
+  const rolls = useSelector((state) => state.RollsReducer.rolls);
 
   React.useEffect(() => {
-    dispatch(fetchSoupsAction());
+    dispatch(fetchRollsAction());
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
@@ -22,12 +22,12 @@ function Soups() {
 
 
   return (
-    <div className={classes.Soups}>
+    <div className={classes.Rolls}>
       <Header />
       <div className={classes.MainContent}>
         <AsideMenu />
         <div className={classes.itemsWrapper}>
-          <h1>супы</h1>
+          <h1>роллы</h1>
           <div className={classes.itemsFilter}>
             <div>
               <span>Фильтр</span>
@@ -48,7 +48,7 @@ function Soups() {
                   </div>
                 );
               })
-            : soups.map((item) => {
+            : rolls.map((item) => {
                 return (
                   <MenuItem
                     imgUrl={item.imgUrl ? item.imgUrl : ""}
@@ -64,4 +64,4 @@ function Soups() {
   );
 }
 
-export default Soups;
+export default Rolls;

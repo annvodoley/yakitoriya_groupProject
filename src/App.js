@@ -12,9 +12,11 @@ import HotRolls from "./pages/Items/HotRolls";
 import Salats from "./pages/Items/Salats";
 import Sets from "./pages/Items/Sets";
 import Soups from "./pages/Items/Soups";
+import Rolls from "./pages/Items/Rolls";
 import { useDispatch } from "react-redux";
 import { useEffect } from "react";
 import { fetchMenuListAction } from "./state/yakitoriya_state/actions";
+
 
 
 
@@ -34,6 +36,7 @@ function App() {
         <Route path="/salats" element={<Salats />} />
         <Route path="/sets" element={<Sets />} />
         <Route path="/soups" element={<Soups />} />
+        <Route path="/rolls" element={<Rolls />} />
         </Routes>
     </div>
   );
