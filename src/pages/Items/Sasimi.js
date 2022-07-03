@@ -7,9 +7,13 @@ import { fetchSasimiAction } from "../../state/yakitoriya_state/actions";
 import MenuItem from "../../components/MenuItem/MenuItem";
 
 function Sasimi() {
+  const [isLoading, setIsLoading] = React.useState(true);
   const dispatch = useDispatch();
   React.useEffect(() => {
     dispatch(fetchSasimiAction());
+    setTimeout(() => {
+      setIsLoading(false);
+    }, 2000);
   }, []);
 
   const sasimi = useSelector((state) => state.SasimiReducer.sasimi);
@@ -32,16 +36,25 @@ function Sasimi() {
               </span>
             </div>
           </div>
-          {sasimi.map((item) => {
-            return (
-              <MenuItem
-                imgUrl={item.imgUrl ? item.imgUrl : ""}
-                name={item.name ? item.name : ""}
-                text={item.desc ? item.desc : ""}
-                price={item.price ? item.price : ""}
-              />
-            );
-          })}
+          {isLoading
+            ? [...Array(3)].map((item) => {
+                return (
+                  <div className={classes.ldsRipple}>
+                    <div></div>
+                    <div></div>
+                  </div>
+                );
+              })
+            : sasimi.map((item) => {
+                return (
+                  <MenuItem
+                    imgUrl={item.imgUrl ? item.imgUrl : ""}
+                    name={item.name ? item.name : ""}
+                    text={item.desc ? item.desc : ""}
+                    price={item.price ? item.price : ""}
+                  />
+                );
+              })}
         </div>
       </div>
     </div>
