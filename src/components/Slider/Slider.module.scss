@@ -7,9 +7,11 @@
     align-items: center;
     justify-content: center;
     height: 100vh;
+   background-repeat: no-repeat;
     background-size: cover;
     width: 100%;
     object-fit: cover;
+    filter: brightness(0.7);
   }
 
   &_link {
@@ -21,15 +23,10 @@
     color: #ffffff;
     font-weight: 400;
     letter-spacing: 2.8px;
+    text-shadow: 1px 1px 2px #000;
   }
 
   &_link:hover {
     color: #adadad;
   }
-
-}
-
-.splide__pagination--ttb {
-  right: 3.5em !important;
-  width: 20px !important;
 }
