@@ -18,16 +18,16 @@ const Slider = () => {
             options= { {
                 direction: 'ttb',
                 arrows: false,
-                cover: true,
+                // cover: true,
                 pagination: true,
                 height: '100vh',
                 wheel    : true,
-                autoplay: 'playing',
-                autoScroll: {
-                    speed: 2,
-                    autoStart: true,
-                    rewind: true,
-                },
+                // autoplay: 'playing',
+                // autoScroll: {
+                //     speed: 2,
+                //     autoStart: true,
+                //     rewind: true,
+                // },
             } }
             aria-label="React Splide Example">
             <SplideSlide>
