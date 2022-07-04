@@ -22,25 +22,24 @@ const Slider = () => {
                 pagination: true,
                 height: '100vh',
                 wheel    : true,
-                // autoplay: 'playing',
-                // autoScroll: {
-                //     speed: 2,
-                //     autoStart: true,
-                //     rewind: true,
-                // },
+                autoplay: 'playing',
+                autoScroll: {
+                    speed: 2,
+                    autoStart: true,
+                    rewind: true,
+                },
             } }
             aria-label="React Splide Example">
             <SplideSlide>
-                <div className={classes.Slider_module}>
+                <div>
+                    {/*<img src={sajt}  className={classes.Slider_module_img} alt=""/>*/}
                     <div className={classes.Slider_module_img} style={{ backgroundImage: `url(${sajt})`}}>
-                        {/*<img src={sajt}  className={classes.Slider_module_img} alt=""/>*/}
                         <h2><a href={''} target={'_blank'} className={classes.Slider_module_link}>Summer Menu</a></h2>
                     </div>
                 </div>
             </SplideSlide>
             <SplideSlide>
                 {/*<img src={monsters}  className={classes.Slider_module_img} alt=""/>*/}
-                {/*<div className={classes.Slider_module_img} style={{*/}
                 <div className={classes.Slider_module_img} style={{ backgroundImage: `url(${monsters})`}}>
                     <h2><a href={''} target={'_blank'} className={classes.Slider_module_link} >"Монстры на каникулах в Якитории"</a></h2>
                 </div>
