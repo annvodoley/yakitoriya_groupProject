@@ -34,7 +34,7 @@ function Rolls() {
         </div>
       </div>
       {isLoading
-        ? [...Array(3)].map((item) => {
+        ? [...Array(9)].map((item) => {
             return (
               <div className={classes.ldsRipple}>
                 <div></div>
