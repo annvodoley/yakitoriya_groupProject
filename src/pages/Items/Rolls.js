@@ -21,7 +21,7 @@ function Rolls() {
 
   return (
     <div className={classes.itemsWrapper}>
-      <h1>роллы</h1>
+      <h1>Роллы</h1>
       <div className={classes.itemsFilter}>
         <div>
           <span>Фильтр</span>
