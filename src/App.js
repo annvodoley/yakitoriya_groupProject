@@ -14,7 +14,6 @@ import {fetchMenuListAction} from './state/yakitoriya_state/actions';
 function App() {
     const dispatch = useDispatch()
 
-
     useEffect(() => {
         dispatch(fetchMenuListAction())
     }, [])
