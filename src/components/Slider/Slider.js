@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import classes from "./Slider.module.scss";
 import './Slider.css'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
