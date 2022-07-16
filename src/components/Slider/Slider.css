@@ -1,3 +1,10 @@
+.splide__pagination{
+    height: 50%;
+    flex-wrap: nowrap!important;
+    top: 50% !important;
+    transform: translate(0,-50%) !important;
+}
+
 .splide__pagination--ttb {
     right: 2em!important;
 }
@@ -18,5 +25,9 @@
 }
 
 .splide__pagination li {
-    line-height: 9!important;
+    line-height: 4!important;
+}
+
+.splide__track{
+    height: 100% !important;
 }
