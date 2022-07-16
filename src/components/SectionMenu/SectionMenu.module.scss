@@ -9,6 +9,9 @@
   align-items: center;
   margin-bottom: 10px;
   border-bottom: 1px solid #888;
+  ::first-letter {
+    text-transform: uppercase;
+  }
 
   p {
     margin-left: 10px;

@@ -1,6 +1,5 @@
 import React from "react";
 import classes from "./Slider.module.scss";
-import './Slider.css'
 import { Splide, SplideSlide } from '@splidejs/react-splide';
 import '@splidejs/react-splide/css';
 import sale from '../image/slider/-10_fon_sajt.jpg';

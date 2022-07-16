@@ -8,11 +8,15 @@ const AsideMenu = () => {
 
   return (
     <aside className={classes.AsideMenu}>
-      {menuList.map((item) => {
+      {menuList.map((item, index) => {
         return (
           <SectionMenu
+            key={index}
             imgUrl={item.imgUrl ? item.imgUrl : ""}
             text={item.name ? item.name : ""}
+            categoryId={
+              item.categoryId.toString() ? item.categoryId.toString() : ""
+            }
           />
         );
       })}
