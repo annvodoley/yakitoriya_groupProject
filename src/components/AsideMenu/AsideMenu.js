@@ -15,7 +15,7 @@ const AsideMenu = () => {
             imgUrl={item.imgUrl ? item.imgUrl : ""}
             text={item.name ? item.name : ""}
             categoryId={
-              item.categoryId.toString() ? item.categoryId.toString() : ""
+              item.categoryName.toString() ? item.categoryName.toString() : ""
             }
           />
         );

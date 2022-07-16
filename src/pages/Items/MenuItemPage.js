@@ -1,25 +1,35 @@
-import React from "react";
-import classes from "./Items.module.scss";
+import React, {useEffect, useState} from "react";
+import classes from "./MenuItemPage.module.scss";
+import Header from "../../components/Header/Header";
+import AsideMenu from "../../components/AsideMenu/AsideMenu";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchSoupsAction } from "../../state/yakitoriya_state/actions";
+import { fetchRollsAction } from "../../state/yakitoriya_state/actions";
 import MenuItem from "../../components/MenuItem/MenuItem";
+import {useLocation} from 'react-router-dom';
 
-function Soups() {
-  const [isLoading, setIsLoading] = React.useState(true);
+function MenuItemPage() {
+  const params = useLocation();
+
+  const [isLoading, setIsLoading] = useState(true);
+  const pathname = params.pathname.split('/')[1]
+
   const dispatch = useDispatch();
 
-  const soups = useSelector((state) => state.SoupsReducer.soups);
+  const menu = useSelector((state) => state.MenuReducer.sectionList);
+  const menuList = useSelector((state) => state.MenuReducer.menuItem);
 
-  React.useEffect(() => {
-    dispatch(fetchSoupsAction());
+  const actualData = menu.find((menuItem) => menuItem.categoryName === pathname)
+
+  useEffect(() => {
+    dispatch(fetchRollsAction(actualData.categoryName));
     setTimeout(() => {
       setIsLoading(false);
     }, 2000);
-  }, []);
+  }, [params]);
 
   return (
     <div className={classes.itemsWrapper}>
-      <h1>Супы</h1>
+      <h1>{actualData.name}</h1>
       <div className={classes.itemsFilter}>
         <div>
           <span>Фильтр</span>
@@ -40,7 +50,7 @@ function Soups() {
               </div>
             );
           })
-        : soups.map((item) => {
+        : menuList.map((item) => {
             return (
               <MenuItem
                 imgUrl={item.imgUrl ? item.imgUrl : ""}
@@ -54,4 +64,4 @@ function Soups() {
   );
 }
 
-export default Soups;
+export default MenuItemPage;
