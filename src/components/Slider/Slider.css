@@ -1,0 +1,33 @@
+.splide__pagination{
+    height: 50%;
+    flex-wrap: nowrap!important;
+    top: 50% !important;
+    transform: translate(0,-50%) !important;
+}
+
+.splide__pagination--ttb {
+    right: 2em!important;
+}
+.splide__pagination__page {
+    border: 1px solid #ffffff!important;
+    /*background: none!important;*/
+    height: 5px!important;
+    width: 5px!important;
+}
+.splide__pagination__page:hover {
+    border: 1px solid #ffffff!important;
+    transform: scale(3.6)!important;
+}
+
+.splide__pagination__page.is-active {
+    background: #ffffff!important;
+    transform: scale(3.6)!important;
+}
+
+.splide__pagination li {
+    line-height: 4!important;
+}
+
+.splide__track{
+    height: 100% !important;
+}
