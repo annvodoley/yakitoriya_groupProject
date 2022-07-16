@@ -1,26 +1,27 @@
-import React, {useEffect, useState} from "react";
+import React, { useEffect, useState } from "react";
 import classes from "./MenuItemPage.module.scss";
-import Header from "../../components/Header/Header";
-import AsideMenu from "../../components/AsideMenu/AsideMenu";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchRollsAction } from "../../state/yakitoriya_state/actions";
 import MenuItem from "../../components/MenuItem/MenuItem";
-import {useLocation} from 'react-router-dom';
+import { useLocation } from "react-router-dom";
 
 function MenuItemPage() {
   const params = useLocation();
 
   const [isLoading, setIsLoading] = useState(true);
-  const pathname = params.pathname.split('/')[1]
+  const pathname = params.pathname.split("/")[1];
 
   const dispatch = useDispatch();
 
   const menu = useSelector((state) => state.MenuReducer.sectionList);
   const menuList = useSelector((state) => state.MenuReducer.menuItem);
 
-  const actualData = menu.find((menuItem) => menuItem.categoryName === pathname)
+  const actualData = menu.find(
+    (menuItem) => menuItem.categoryName === pathname
+  );
 
   useEffect(() => {
+    setIsLoading(true);
     dispatch(fetchRollsAction(actualData.categoryName));
     setTimeout(() => {
       setIsLoading(false);
