@@ -15,11 +15,10 @@ import business_lunch from '../image/slider/busnes_lunch.png'
 const Slider = () => {
     return (
         <Splide
-            className={classes.Slider_module}
-            options= { {
+            className={ classes.Slider_module }
+            options= {{
                 direction: 'ttb',
                 arrows: false,
-                // cover: true,
                 pagination: true,
                 height: '100vh',
                 wheel    : true,
@@ -29,7 +28,7 @@ const Slider = () => {
                     autoStart: true,
                     rewind: true,
                 },
-            } }
+            }}
             aria-label="React Splide Example">
             <SplideSlide>
                 <div>
@@ -41,7 +40,7 @@ const Slider = () => {
             </SplideSlide>
             <SplideSlide>
                 {/*<img src={monsters}  className={classes.Slider_module_img} alt=""/>*/}
-                <div className={classes.Slider_module_img} style={{ backgroundImage: `url(${monsters})`}}>
+                <div className={classes.Slider_module_img} style={{ backgroundImage: `url(${ monsters })`}}>
                     <h2><a href={''} target={'_blank'} className={classes.Slider_module_link} >"Монстры на каникулах в Якитории"</a></h2>
                 </div>
             </SplideSlide>
@@ -77,7 +76,7 @@ const Slider = () => {
             <SplideSlide>
                 {/*<img src={blunch}  className={classes.Slider_module_img} alt=""/>*/}
                 <div className={classes.Slider_module_img} style={{
-                    backgroundImage: `url(${blunch})`}}>
+                    backgroundImage: `url(${ blunch })`}}>
                     <h2><a href={''} target={'_blank'} className={classes.Slider_module_link} >"Бизнес ланчи"</a></h2>
                 </div>
             </SplideSlide>
