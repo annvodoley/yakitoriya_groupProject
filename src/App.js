@@ -12,6 +12,7 @@ function App() {
   const dispatch = useDispatch();
   const menu = useSelector((state) => state.MenuReducer.sectionList);
 
+<<<<<<< HEAD
   const menuSectionName = menu.map((menuItem) => menuItem.categoryName)
 
   useEffect(() => {
@@ -33,6 +34,19 @@ function App() {
       </Routes>
     </div>
   );
+=======
+    useEffect(() => {
+        dispatch(fetchMenuListAction())
+    }, [])
+    return (
+        <div className="app">
+            <Routes>
+                <Route path='/' element={<Home/>}/>
+                <Route path='/home' element={<Home/>}/>
+            </Routes>
+        </div>
+    );
+>>>>>>> cbce5d2ad968257a7475592d3e7582c0e402502a
 }
 
 export default App;
