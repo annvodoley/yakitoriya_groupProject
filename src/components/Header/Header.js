@@ -1,9 +1,9 @@
 import React from "react";
 import classes from "./Header.module.scss";
 import icon from "../../images/yakitoria_logo.svg";
-import {Link, NavLink, Route, Routes} from "react-router-dom";
+import { Link, NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
-import PageDeliveryMap from "../PageDelivery/PageDeliveryMap";
+
 
 const Header = () => {
   return (
@@ -30,10 +30,7 @@ const Header = () => {
                 </a>
               </li>
               <li className={classes.Navigation_menu__item}>
-                <NavLink to={"/delivery/"}>
-                  О доставке
-                </NavLink>
-
+                <NavLink to={"/delivery/"}> О доставке </NavLink>
               </li>
               <li className={classes.Navigation_menu__item}>
                 <a href="/yakitoria/" className={classes.Navigation_menu__links}>

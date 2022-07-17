@@ -7,7 +7,8 @@ import React, { useEffect } from "react";
 import { fetchMenuListAction } from "./state/yakitoriya_state/actions";
 import Layout from "./pages/Layout/Layout";
 import NotFound from "./pages/NotFound/NotFound";
-import PageDeliveryMap from "./components/PageDelivery/PageDeliveryMap";
+import PageDeliveryMap from "./pages/PageDelivery/PageDeliveryMap";
+
 
 function App() {
   const dispatch = useDispatch();
