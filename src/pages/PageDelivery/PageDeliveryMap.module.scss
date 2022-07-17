@@ -1,0 +1,26 @@
+.deliveryMap_module {
+  color: #ffffff;
+  padding-left: 64px;
+  display: flex;
+  flex-direction: column;
+  justify-content:flex-start;
+  gap: 20px;
+  h2 {
+    padding: 30px 0;
+  }
+  span{
+    display: flex;
+    height: 20px;
+  }
+ span p{
+   text-decoration: underline;
+ }
+  span:before{
+    content: "🔆";
+    width: 25px;
+    height: 25px;
+    padding-right: 10px;
+  }
+
+
+}
