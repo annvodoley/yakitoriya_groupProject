@@ -1,14 +1,18 @@
 import { BsFillBasket3Fill } from "react-icons/bs";
 import classes from "./Cart.module.scss";
+import {useSelector} from "react-redux";
 
 function App() {
+
+  const addToCart = useSelector((state) => state.CartReducer);
+
   return (
     <div className={classes.flex}>
       <div></div>
       <div className={classes.dropdown}>
         <button className={classes.dropbtn}>
           <BsFillBasket3Fill className={classes.cartIcon} />
-          Пустая корзина
+          {addToCart > 0 ? addToCart: "Пустая корзина"}
         </button>
         <div className={classes.dropdownBox}>
           <div className={classes.dropdownContent}>
@@ -17,7 +21,7 @@ function App() {
               <div className={classes.dropdownOrder}>
                 <h3>Мой заказ</h3>
                 <span>
-                  0 <span>руб.</span>
+                  {addToCart} <span>руб.</span>
                 </span>
               </div>
             </div>
