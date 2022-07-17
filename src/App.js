@@ -3,10 +3,11 @@ import { Route, Routes } from "react-router-dom";
 import Home from "./pages/Home/Home";
 import MenuItemPage from "./pages/Items/MenuItemPage";
 import {useDispatch, useSelector} from 'react-redux';
-import { useEffect } from "react";
+import React, { useEffect } from "react";
 import { fetchMenuListAction } from "./state/yakitoriya_state/actions";
 import Layout from "./pages/Layout/Layout";
 import NotFound from "./pages/NotFound/NotFound";
+import PageDeliveryMap from "./components/PageDelivery/PageDeliveryMap";
 
 function App() {
   const dispatch = useDispatch();
@@ -24,7 +25,8 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="home" element={<Home />} />
-          <Route path="*" element={<NotFound />} />
+                <Route path={'/delivery'} element={<PageDeliveryMap/>}/>
+            <Route path="*" element={<NotFound />} />
           {menuSectionName.map(menuItemName => {
             return(
                 <Route path={menuItemName} element={<MenuItemPage />} />
