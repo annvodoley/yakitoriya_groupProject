@@ -1,6 +1,13 @@
 import {
-  ADD_MENU_LIST,
-  ADD_MENU_ITEM,
+    ADD_MENU_LIST,
+    ADD_MENU_ITEM,
+    ADD_ORDER,
+    ADD_INCREMENT,
+    ADD_DECREMENT,
+    ADD_TO_CART,
+    INCREASE_QUANTITY,
+    DECREASE_QUANTITY,
+    REMOVE_FROM_CART,
 } from "./types";
 
 //request MenuListAction
@@ -29,4 +36,14 @@ export const addMenuListAction = (menuList) => ({
 export const addSMenuItemAction = (menuItem) => ({
   type: ADD_MENU_ITEM,
   payload: menuItem,
+});
+
+//добавление в корзину
+
+export const addIncrement = () => ({
+    type: INCREASE_QUANTITY,
+});
+
+export const addDecrement = () => ({
+    type: DECREASE_QUANTITY,
 });
