@@ -7,7 +7,7 @@ import React, { useEffect } from "react";
 import { fetchMenuListAction } from "./state/yakitoriya_state/actions";
 import Layout from "./pages/Layout/Layout";
 import NotFound from "./pages/NotFound/NotFound";
-import PageDeliveryMap from "./pages/PageDelivery/PageDeliveryMap";
+import PageDelivery from "./pages/PageDelivery/PageDelivery";
 
 
 function App() {
@@ -26,7 +26,7 @@ function App() {
         <Route path="/" element={<Layout />}>
           <Route index element={<Home />} />
           <Route path="home" element={<Home />} />
-                <Route path={'/delivery'} element={<PageDeliveryMap/>}/>
+                <Route path={'/delivery'} element={<PageDelivery/>}/>
             <Route path="*" element={<NotFound />} />
           {menuSectionName.map(menuItemName => {
             return(
