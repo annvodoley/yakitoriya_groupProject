@@ -5,29 +5,31 @@
   flex-direction: column;
   justify-content:flex-start;
   gap: 20px;
+
   h2 {
     padding: 30px 0;
   }
+
   &_time {
     display: flex;
     height: 20px;
-
     &_par {
       text-decoration: underline;
     }
   }
-  &_time:before{
-    content: "";
-    width: 25px;
-    height: 25px;
-    padding-right: 10px;
+  &_time:before {
+    content: '⭐';
+    width: 32px;
+    height: 32px;
   }
+
   &__link {
     color: #c31b30;
     display: flex;
     position: relative;
     width: 437px;
   }
+
   &__link:after {
     position: absolute;
     right: 0;
@@ -36,6 +38,7 @@
     height: 23px;
   }
 }
+
 .deliveryMap_module__order {
   display: flex;
   flex-direction: row;
@@ -46,15 +49,17 @@
     margin-right: 20px;
   }
 
-
-
   &_txt {
     padding: 23px 0 23px 0;
+    width:64%;
   }
+
   &_txt2 {
     color: #5c6165;
   }
-
-
-
 }
+  .deliveryMap_module__delivery {
+    display: flex;
+    flex-wrap: wrap;
+
+  }
