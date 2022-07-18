@@ -8,6 +8,7 @@ import { fetchMenuListAction } from "./state/yakitoriya_state/actions";
 import Layout from "./pages/Layout/Layout";
 import NotFound from "./pages/NotFound/NotFound";
 import PageDelivery from "./pages/PageDelivery/PageDelivery";
+import Footer from "./components/Footer/Footer";
 
 
 function App() {
@@ -21,6 +22,7 @@ function App() {
     dispatch(fetchMenuListAction());
   }, []);
   return (
+
     <div className={classes.app}>
       <Routes>
         <Route path="/" element={<Layout />}>
@@ -35,6 +37,7 @@ function App() {
           })}
         </Route>
       </Routes>
+        <Footer/>
     </div>
   );
 
