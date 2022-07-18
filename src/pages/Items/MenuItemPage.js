@@ -3,7 +3,7 @@ import classes from "./MenuItemPage.module.scss";
 import Header from "../../components/Header/Header";
 import AsideMenu from "../../components/AsideMenu/AsideMenu";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchRollsAction } from "../../state/yakitoriya_state/actions";
+import {addDecrement, addIncrement, fetchRollsAction} from "../../state/yakitoriya_state/actions";
 import MenuItem from "../../components/MenuItem/MenuItem";
 import {useLocation} from 'react-router-dom';
 
@@ -26,6 +26,21 @@ function MenuItemPage() {
       setIsLoading(false);
     }, 2000);
   }, [params]);
+
+
+
+  const addToCart = useSelector((state) => state.CartReducer);
+
+
+    const addToCartFunction = () => {
+      dispatch(addIncrement())
+    }
+     const removeCartFunction = () => {
+      dispatch(addDecrement())
+    }
+
+
+
 
   return (
     <div className={classes.itemsWrapper}>
@@ -57,6 +72,9 @@ function MenuItemPage() {
                 name={item.name ? item.name : ""}
                 text={item.desc ? item.desc : ""}
                 price={item.price ? item.price : ""}
+                onClick={addToCartFunction}
+                onClick2={removeCartFunction}
+                addToCart={addToCart}
               />
             );
           })}

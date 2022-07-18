@@ -1,7 +1,11 @@
 import React from "react";
 import classes from "./MenuItem.module.scss";
 
-function MenuItem({ imgUrl, name, text, price }) {
+
+function MenuItem({ imgUrl, name, text, price,onClick, onClick2, addToCart}) {
+
+
+
   return (
     <div className={classes.catalog__item}>
       <a href="#" className={classes.catalog__img}>
@@ -16,9 +20,9 @@ function MenuItem({ imgUrl, name, text, price }) {
           {price} <span>руб.</span>
         </div>
         <div className={classes.catalog__spinner}>
-          <button>-</button>
-          <input type="text" readOnly placeholder="0" />
-          <button>+</button>
+          <button onClick={addToCart >0 && onClick2}>-</button>
+          <input value={addToCart} type="text" readOnly placeholder="0" />
+          <button onClick={onClick}>+</button>
         </div>
       </div>
     </div>
