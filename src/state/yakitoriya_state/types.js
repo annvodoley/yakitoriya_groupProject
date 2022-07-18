@@ -5,6 +5,6 @@ export const ADD_MENU_ITEM = "ADD_MENU_ITEM";
 
 
 //добавление в корзину
-export const INCREASE_QUANTITY = "INCREASE_QUANTITY";
-export const DECREASE_QUANTITY = "DECREASE_QUANTITY";
+export const ADD_MENU_ITEM_CART = "ADD_MENU_ITEM_CART"
+export const ADD_MENU_ITEM_COUNT = "ADD_MENU_ITEM_COUNT"
 
