@@ -1,5 +1,4 @@
 import React from 'react';
-import yand_map from '../../images/yan_map.png'
 import classes from './PageDelivery.module.scss';
 import del_monitor from '../../images/del-monitor.svg';
 import del_phone from '../../images/del-phone.svg';
@@ -10,7 +9,9 @@ import del_note from '../../images/del-note.svg';
 import del_map from '../../images/del-map.svg';
 import del_like from '../../images/del-like.svg';
 import del_cart from '../../images/del-cart.svg';
-import del_hourglass from '../../images/del-hourglass.svg'
+import del_hourglass from '../../images/del-hourglass.svg';
+import del_wallet from '../../images/del-wallet.svg';
+import del_card from '../../images/del-card.svg';
 
 
 function PageDelivery() {
@@ -107,9 +108,24 @@ function PageDelivery() {
                             оператора</p>
                     </div>
                 </div>
+                    <h2>Оплата</h2>
+                    <div className={classes.deliveryMap_module__order}>
+                        <div className={classes.deliveryMap_module__order_block}>
+                            <img src={del_wallet} alt={''}/>
+                            <p className={classes.deliveryMap_module__order_txt}>НАЛИЧНЫМИ КУРЬЕРУ</p>
+                            <p className={classes.deliveryMap_module__order_txt2}>При получении заказа</p>
+                        </div>
+                        <div className={classes.deliveryMap_module__order_block}>
+                            <img src={del_card} alt={''}/>
+                            <p className={classes.deliveryMap_module__order_txt}>БАНКОВСКОЙ КАРТОЙ</p>
+                            <p className={classes.deliveryMap_module__order_txt2}>При оформлении на сайте,
+                                курьеру при получении заказа</p>
+                        </div>
+                     </div>
+
             </div>
-        </div>)
-        ;
+        </div>
+    )
 }
 
 export default PageDelivery;
