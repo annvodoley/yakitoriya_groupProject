@@ -1,10 +1,8 @@
-import { combineReducers } from "redux";
-import {
-  CartReducer,
-  MenuReducer,
-} from "./yakitoriya_state/reducer";
+import {combineReducers} from 'redux';
+import {MenuReducer,} from './yakitoriya_state/reducer';
+import { CartsReducers} from './yakitoriya_state/cartReducer';
 
 export const RootReducer = combineReducers({
-  MenuReducer: MenuReducer,
-  CartReducer: CartReducer
+    MenuReducer: MenuReducer,
+    CartsReducers: CartsReducers
 });
