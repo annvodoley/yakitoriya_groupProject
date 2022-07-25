@@ -17,7 +17,7 @@ function MenuItem({imgUrl, name, text, price, onClick, onClick2, addToCart, id, 
                     {price} <span>руб.</span>
                 </div>
                 <div className={classes.catalog__spinner}>
-                    <button onClick={() => console.log(1)}>-</button>
+                    <button onClick={() => onClick2(id)}>-</button>
                     <span>{count}</span>
                     <button onClick={() => onClick({name: name, price: price, id: id, count: count+1})}>+</button>
                 </div>

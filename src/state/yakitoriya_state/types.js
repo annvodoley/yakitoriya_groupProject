@@ -6,5 +6,6 @@ export const ADD_MENU_ITEM = "ADD_MENU_ITEM";
 
 //добавление в корзину
 export const ADD_MENU_ITEM_CART = "ADD_MENU_ITEM_CART"
-export const ADD_MENU_ITEM_COUNT = "ADD_MENU_ITEM_COUNT"
 
+//удаление из корзины
+export const DELETE_MENU_ITEM_CART = "DELETE_MENU_ITEM_CART"

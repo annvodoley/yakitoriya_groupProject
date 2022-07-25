@@ -1,7 +1,7 @@
 import {
     ADD_MENU_ITEM, ADD_MENU_ITEM_CART, ADD_MENU_ITEM_COUNT,
     ADD_MENU_LIST,
-    DECREASE_QUANTITY,
+    DECREASE_QUANTITY, DELETE_MENU_ITEM_COUNT,
     INCREASE_QUANTITY,
 } from './types';
 
@@ -16,15 +16,6 @@ export const MenuReducer = (state = initState, action) => {
             return {...state, sectionList: action.payload};
         case ADD_MENU_ITEM:
             return {...state, menuItem: action.payload};
-        case ADD_MENU_ITEM_COUNT:
-            const index = state.menuItem.findIndex((item) => item._id === action.payload.id)
-            console.log(index)
-            if (index !== -1) {
-                const copyState = {...state}
-                copyState.menuItem[index].count++
-                return copyState
-            }
-
         default:
             return {...state};
     }

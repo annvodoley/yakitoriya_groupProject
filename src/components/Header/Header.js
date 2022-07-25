@@ -3,9 +3,11 @@ import classes from "./Header.module.scss";
 import icon from "../../images/yakitoria_logo.svg";
 import { Link, NavLink } from "react-router-dom";
 import Cart from "../Cart/Cart";
+import {useSelector} from 'react-redux';
 
 
 const Header = () => {
+
   return (
       <div className={classes.Header_main}>
         <div className={classes.Header_main__container}>

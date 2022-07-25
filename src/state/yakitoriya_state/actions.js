@@ -7,7 +7,7 @@ import {
     ADD_TO_CART,
     INCREASE_QUANTITY,
     DECREASE_QUANTITY,
-    REMOVE_FROM_CART, ADD_MENU_ITEM_CART, ADD_MENU_ITEM_COUNT,
+    REMOVE_FROM_CART, ADD_MENU_ITEM_CART, ADD_MENU_ITEM_COUNT, DELETE_MENU_ITEM_COUNT, DELETE_MENU_ITEM_CART,
 } from './types';
 
 //request MenuListAction
@@ -42,13 +42,14 @@ export const addSMenuItemAction = (menuItem) => ({
 });
 
 //добавление в корзину
-
 export const addMenuItemCartAction = (menuItem) => ({
     type: ADD_MENU_ITEM_CART,
     payload: menuItem,
 })
 
-export const addMenuItemCountAction = (menuItem) => ({
-    type: ADD_MENU_ITEM_COUNT,
-    payload: menuItem,
+//Удаление из корзины
+
+export const deleteMenuItemCartAction = (id) => ({
+    type: DELETE_MENU_ITEM_CART,
+    payload: id,
 })
