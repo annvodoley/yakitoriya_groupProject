@@ -1,11 +1,4 @@
-import {
-  ADD_MENU_LIST,
-  ADD_MENU_ITEM,
-  ADD_MENU_ITEM_CART,
-  ADD_MENU_ITEM_COUNT,
-  REMOVE_MENU_ITEM_COUNT,
-  REMOVE_MENU_ITEM_CART,
-} from "./types";
+import { ADD_MENU_LIST, ADD_MENU_ITEM, ADD_MENU_ITEM_CART } from "./types";
 
 //request MenuListAction
 export const fetchMenuListAction = () => {
@@ -39,23 +32,14 @@ export const addSMenuItemAction = (menuItem) => ({
 });
 
 //добавление в корзину
-
 export const addMenuItemCartAction = (menuItem) => ({
   type: ADD_MENU_ITEM_CART,
   payload: menuItem,
 });
 
-export const addMenuItemCountAction = (menuItem) => ({
-  type: ADD_MENU_ITEM_COUNT,
-  payload: menuItem,
-});
+//Удаление из корзины
 
-export const removeMenuItemCountAction = (menuItem) => ({
-  type: REMOVE_MENU_ITEM_COUNT,
-  payload: menuItem,
-});
-
-export const removeMenuItemCartAction = (menuItem) => ({
-  type: REMOVE_MENU_ITEM_CART,
-  payload: menuItem,
+export const deleteMenuItemCartAction = (id) => ({
+  type: DELETE_MENU_ITEM_CART,
+  payload: id,
 });

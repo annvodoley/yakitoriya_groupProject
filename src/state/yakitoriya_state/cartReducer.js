@@ -1,4 +1,4 @@
-import { ADD_MENU_ITEM_CART, REMOVE_MENU_ITEM_CART } from "./types";
+import { ADD_MENU_ITEM_CART, DELETE_MENU_ITEM_CART } from "./types";
 
 const initState = {
   orderList: [],
@@ -10,28 +10,26 @@ export const CartsReducers = (state = initState, action) => {
       const index = state.orderList.findIndex(
         (item) => item.id === action.payload.id
       );
-      console.log(index);
       if (index !== -1) {
         const copyState = { ...state };
-        copyState.orderList[index].count++;
+        copyState.orderList[index].count += 1;
         return copyState;
       }
       return { ...state, orderList: [...state.orderList, action.payload] };
-
-    case REMOVE_MENU_ITEM_CART:
-      const removeIndex = state.orderList.findIndex(
-        (item) => item.id === action.payload.id
+    case DELETE_MENU_ITEM_CART: {
+      const index = state.orderList.findIndex(
+        (item) => item.id === action.payload
       );
-      if (removeIndex !== -1) {
-        const copyState2 = { ...state };
-        copyState2.orderList[removeIndex].count--;
-        return copyState2;
+      if (index !== -1) {
+        const copyState = { ...state };
+        copyState.orderList[index].count -= 1;
+        if (copyState.orderList[index].count === 0) {
+          copyState.orderList.splice(index, 1);
+          return copyState;
+        }
+        return copyState;
       }
-      return {
-        ...state,
-        orderList: [...state.orderList, action.payload],
-      };
-
+    }
     default:
       return { ...state };
   }
