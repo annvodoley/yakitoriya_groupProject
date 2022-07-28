@@ -1,14 +1,11 @@
 import {
-    ADD_MENU_LIST,
-    ADD_MENU_ITEM,
-    ADD_ORDER,
-    ADD_INCREMENT,
-    ADD_DECREMENT,
-    ADD_TO_CART,
-    INCREASE_QUANTITY,
-    DECREASE_QUANTITY,
-    REMOVE_FROM_CART, ADD_MENU_ITEM_CART, ADD_MENU_ITEM_COUNT,
-} from './types';
+  ADD_MENU_LIST,
+  ADD_MENU_ITEM,
+  ADD_MENU_ITEM_CART,
+  ADD_MENU_ITEM_COUNT,
+  REMOVE_MENU_ITEM_COUNT,
+  REMOVE_MENU_ITEM_CART,
+} from "./types";
 
 //request MenuListAction
 export const fetchMenuListAction = () => {
@@ -24,8 +21,8 @@ export const fetchRollsAction = (categoryName) => {
     fetch(`https://roll-store.herokuapp.com/menu/${categoryName}`)
       .then((res) => res.json())
       .then((res) => {
-          const newData = res.map(item => ({...item, count: 0}))
-          dispatch(addSMenuItemAction(newData))
+        const newData = res.map((item) => ({ ...item, count: 0 }));
+        dispatch(addSMenuItemAction(newData));
       });
 };
 
@@ -44,11 +41,21 @@ export const addSMenuItemAction = (menuItem) => ({
 //добавление в корзину
 
 export const addMenuItemCartAction = (menuItem) => ({
-    type: ADD_MENU_ITEM_CART,
-    payload: menuItem,
-})
+  type: ADD_MENU_ITEM_CART,
+  payload: menuItem,
+});
 
 export const addMenuItemCountAction = (menuItem) => ({
-    type: ADD_MENU_ITEM_COUNT,
-    payload: menuItem,
-})
+  type: ADD_MENU_ITEM_COUNT,
+  payload: menuItem,
+});
+
+export const removeMenuItemCountAction = (menuItem) => ({
+  type: REMOVE_MENU_ITEM_COUNT,
+  payload: menuItem,
+});
+
+export const removeMenuItemCartAction = (menuItem) => ({
+  type: REMOVE_MENU_ITEM_CART,
+  payload: menuItem,
+});
