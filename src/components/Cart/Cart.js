@@ -1,7 +1,7 @@
 import { BsFillBasket3Fill } from "react-icons/bs";
 import classes from "./Cart.module.scss";
-import { useSelector } from "react-redux";
-import { useEffect } from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteMenuItemCartAction } from "../../state/yakitoriya_state/actions";
 
 function Cart() {
   const CartsReducers = useSelector((state) => state.CartsReducers);
@@ -18,13 +18,18 @@ function Cart() {
     .map((item) => item.count)
     .reduce((acc, prevItem) => acc + prevItem, 0);
 
+  const dispatch = useDispatch();
+  const handleClick = () => {
+    dispatch(deleteMenuItemCartAction());
+  };
+
   return (
     <div className={classes.flex}>
       <div></div>
       <div className={classes.dropdown}>
         <button className={classes.dropbtn}>
           <BsFillBasket3Fill className={classes.cartIcon} />
-          {sumCount > 0 ? `${sumCount} | ${sumOrder()} руб.` : "Пустая корзина"}
+          {sumCount > 0 ? `${sumCount} / ${sumOrder()} руб.` : "Пустая корзина"}
         </button>
         <div className={classes.dropdownBox}>
           <div className={classes.dropdownContent}>
@@ -44,6 +49,7 @@ function Cart() {
                     <span>{item.name}</span>
                     <span>{item.count}</span>
                     <span>{item.price * item.count}</span>
+                    <span onClick={handleClick}>x</span>
                   </div>
                 );
               })}
