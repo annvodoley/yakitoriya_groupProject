@@ -39,6 +39,7 @@ function MenuItemPage() {
   };
 
   useEffect(() => {
+    setIsLoading(true);
     dispatch(fetchRollsAction(actualData.categoryName));
     setTimeout(() => {
       setIsLoading(false);

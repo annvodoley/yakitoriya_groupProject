@@ -19,8 +19,8 @@ function Cart() {
     .reduce((acc, prevItem) => acc + prevItem, 0);
 
   const dispatch = useDispatch();
-  const handleClick = () => {
-    dispatch(deleteMenuItemCartAction());
+  const handleClick = (id) => {
+    dispatch(deleteMenuItemCartAction(id));
   };
 
   return (
@@ -49,7 +49,7 @@ function Cart() {
                     <span>{item.name}</span>
                     <span>{item.count}</span>
                     <span>{item.price * item.count}</span>
-                    <span onClick={handleClick}>x</span>
+                    <span onClick={() => handleClick(item.id)}>x</span>
                   </div>
                 );
               })}

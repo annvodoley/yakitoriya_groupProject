@@ -21,8 +21,15 @@ a {
   .menuItemMini {
     width: 100%;
     display: flex;
+    background: #2b2d2f;
+    border: 1px solid #44474a;
+    border-radius: 5px;
     span {
-      display: block;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      margin: 5px;
       padding: 5px;
     }
     span:nth-child(1) {
@@ -169,7 +176,7 @@ a {
   align-items: flex-start;
   color: rgba(255, 255, 255, 0.6);
   background: #44474a;
-  padding: 25px 25px 25px 25px;
+  padding: 1px 1px 1px 1px;
   border-top: 1px solid #5c6165;
 }
 .dropdownTotalPrice {
