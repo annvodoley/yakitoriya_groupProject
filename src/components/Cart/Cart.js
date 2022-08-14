@@ -49,7 +49,7 @@ function Cart() {
                     <span>{item.name}</span>
                     <span>{item.count}</span>
                     <span>{item.price * item.count}</span>
-                    <span onClick={() => handleClick(item.id)}>x</span>
+                    <span onClick={() => handleClick(item.id)}>&#128473;</span>
                   </div>
                 );
               })}
